@@ -9,21 +9,21 @@ function add(n1:number,n2:number) {
 }
 */
 // objects
-var person = {
-    name: 'abhi',
+let person = {
+    name: "abhi",
     age: 25,
-    role: ['developer'],
-    department: [1, 'cse']
+    role: ["developer"],
+    department: [1, "cse"],
 };
 console.log(person.name, person.age, person.role, person.department[1]);
 // arrays
-var arrOfHobbies = ['learning', 'playing', 'cooking', 'dancing'];
-arrOfHobbies.forEach(function (item) {
+let arrOfHobbies = ["learning", "playing", "cooking", "dancing"];
+arrOfHobbies.forEach((item) => {
     console.log(item.toUpperCase());
 });
 //tuples
-var t1 = [1, true, 'hello'];
-var x = t1[0], y = t1[1], z = t1[2];
+let t1 = [1, true, "hello"];
+const [x, y, z] = t1;
 console.log(x, y, z);
 // functions
 function add(n1, n2) {
@@ -33,12 +33,12 @@ console.log(add(2, 3));
 function greet(name) {
     console.log("hello! ", name);
 }
-console.log("greet fun", greet('abhi'));
+console.log("greet fun", greet("abhi"));
 // object type
 function objectTesting(obj) {
-    console.log("x-axis is ".concat(obj.x));
+    console.log(`x-axis is ${obj.x}`);
     if (obj.y !== undefined)
-        console.log("y-axis is ".concat(obj.y));
+        console.log(`y-axis is ${obj.y}`);
 }
 objectTesting({ x: 6, y: 7 });
 // enums
@@ -49,13 +49,13 @@ var Roles;
     Roles[Roles["DEVELOPER"] = 2] = "DEVELOPER";
     Roles[Roles["TESTER"] = 3] = "TESTER";
 })(Roles || (Roles = {}));
-var person1 = {
-    name: 'abhi',
+let person1 = {
+    name: "abhi",
     age: 25,
-    department: [1, 'cse'],
-    role: Roles.DEVELOPER
+    department: [1, "cse"],
+    role: Roles.DEVELOPER,
 };
-if (person1.role = Roles.DEVELOPER) {
+if ((person1.role = Roles.DEVELOPER)) {
     console.log("hie ! developer");
 }
 // interface Bear extends Animal{
